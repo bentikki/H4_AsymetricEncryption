@@ -55,7 +55,8 @@ namespace ConsoleVersionReader
 
         }
 
-
+        // Static function, to allow larger string input in readline. 
+        // Used so the encrypted text is able to be pasted in ReadLine input.
         private static string ReadLine()
         {
             byte[] inputBuffer = new byte[1024];
