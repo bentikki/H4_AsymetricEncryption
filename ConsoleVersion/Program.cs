@@ -20,6 +20,9 @@ namespace ConsoleVersion
                     Console.Clear();
 
                     IAsymetricEncrypter encrypter = new RSAEncrypterXML();
+                    if (!encrypter.KeyExists())
+                        encrypter.AssignNewKey();
+
                     byte[] encryptedValue = null;
 
                     Console.WriteLine("----------Asymetric Encryption with RSA----------");

@@ -16,6 +16,15 @@ namespace AsymetricEncryption
 
         public string Name => "RSA with XML";
 
+        public bool KeyExists()
+        {
+            if (File.Exists(this._privateKeyPath) && File.Exists(this._publicKeyPath))
+            {
+                return true;
+            }
+            return false;
+        }
+
         public void AssignNewKey()
         {
             using (var rsa = new RSACryptoServiceProvider(this._keyLength))

@@ -12,5 +12,6 @@ namespace AsymetricEncryption
         byte[] Decrypt(byte[] dataToDecrypt);
         byte[] Encrypt(byte[] dataToEncrypt);
         void AssignNewKey();
+        bool KeyExists();
     }
 }
